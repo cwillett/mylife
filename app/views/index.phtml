@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/site.css">
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
+		<script src="/semantic/dist/semantic.min.js"></script>
+		<script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
+		<script src="/js/feedreader.js"></script>
+		
+	</head>
+	<body>
+		
+		<h1 class="ui center aligned header homepage-h1">MyLife</h1>
+		<div id="wrapper" class="ui grid">
+			<div id="nav" class="three wide column">
+				<div class="ui inverted vertical menu">
+					<div class="item">
+						<div class="ui input"><input type="text" placeholder="Search..."></div>
+					</div>
+					<? 
+						$cont = $this->router->getControllerName();
+						$action = $this->router->getActionName();
+					?>
+					<a class="<? if($cont == "") {?>active <?php }?>item" href="/index">Home</a>
+					<div class="ui simple dropdown item">
+						Music
+						<i class="dropdown icon"></i>
+					    <div class="menu">
+						  <a class="<? if($cont == "music" && $action == "") {?>active <?php }?>item" href="/music">News</a>
+					      <a class="<? if($cont == "music" && $action == "drums") {?>active <?php }?>item" href="/music/drums">Drums</a>
+					    </div>
+					</div>
+					<a class="<? if($cont == "finances") {?>active <?php }?>item" href="/finances">Finances</a>
+				</div>
+			</div>
+			<div id="main" class="thirteen wide column">
+				<?php echo $this->getContent(); ?>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+h1.ui.center.header {
+    margin: 1em
+}
+
+.rss-feed {
+  margin: 10px auto;
+  color: #3b085f;
+}
+
+.rss-feed {
+  margin: 10px auto;
+  color: #3b085f;
+}
+
+.rss-feed a { color: 000; }
+
+.rss-feed img {
+  border: 0;
+  border: 5px solid #3b085f;
+  border-radius: 5px;
+}
+
+.rss-feed .entryWrapper {
+    margin-bottom: 10px;
+}
+
+div.entry iframe,
+div.entry img {
+    max-width: 100%!important
+}

@@ -1,0 +1,44 @@
+        <div class="ui segments">
+            <div class="ui segment">
+                <div class="ui two column stackable grid">
+                    <div class="column feeds">
+                        <div class="ui segment feed blog">
+                            <h3 class="ui center aligned header homepage-h1">Loudwire</h3>
+                            <div id="rss-feed" class="rss-feed">
+                                <div class="loading">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="ui segment feed blog">
+                            <h3 class="ui center aligned header homepage-h1">eJazzNews</h3>
+                            <div id="rss-feed3" class="rss-feed">
+                                <div class="loading">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="ui segment feed blog">
+                            <h3 class="ui center aligned header homepage-h1">New Music</h3>
+                            <div class="ui bulleted list">                            
+                                <div class="item"><a href="http://pitchfork.com/best" target="_new">Pitchfork Best New Music</a></div>
+                                <div class="item"><a href="http://www.indieshuffle.com/songs/punk+post-punk/" target="_new">Indie Shuffle Punk &amp; Post-Punk</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui segment">
+                            <h3 class="ui center aligned header homepage-h1">Blabbermouth</h3>
+                            <div id="rss-feed2" class="rss-feed">
+                                <div class="loading">Loading...</div>
+                            </div>                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <script>
+        window.onload = function(){
+          loadEntries('http://loudwire.com/feed/','rss-feed')
+          loadEntries('http://www.blabbermouth.net/feed.rss','rss-feed2')
+          loadEntries('http://ejazznews.com/?feed=rss2','rss-feed3')
+        }
+        </script>

@@ -1,0 +1,28 @@
+        <div class="ui segments">
+            <div class="ui segment">
+                <div class="ui two column stackable grid">
+                    <div class="column">
+                        <div class="ui segment feed blog">
+                            <h3 class="ui center aligned header homepage-h1">Drum Magazine</h3>
+                            <div id="rss-feed" class="rss-feed">
+                                <div class="loading">Loading...</div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="column">
+                        <div class="ui segment feed blog">
+                            <h3 class="ui center aligned header homepage-h1">Modern Drummer</h3>
+                            <div id="rss-feed2" class="rss-feed">
+                                <div class="loading">Loading...</div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        window.onload = function(){
+          loadEntries('http://www.drummagazine.com/rss/all','rss-feed')
+          loadEntries('http://www.moderndrummer.com/feed/','rss-feed2')
+        }
+        </script>
