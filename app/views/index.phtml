@@ -26,15 +26,17 @@
 						$action = $this->router->getActionName();
 					?>
 					<a class="<? if($cont == "") {?>active <?php }?>item" href="/index">Home</a>
-					<div class="ui simple dropdown item">
-						Music
-						<i class="dropdown icon"></i>
-					    <div class="menu">
+					<div class="ui inverted accordion">
+						<div class="<? if($cont == "music") {?>active <?php }?> title">
+							<a class="item" href="/music"><i class="dropdown icon"></i> Music</a>
+						</div>
+					    <div class="<? if($cont == "music") {?>active <?php }?> menu content">
 						  <a class="<? if($cont == "music" && $action == "") {?>active <?php }?>item" href="/music">News</a>
-					      <a class="<? if($cont == "music" && $action == "drums") {?>active <?php }?>item" href="/music/drums">Drums</a>
+						  <a class="<? if($cont == "music" && $action == "drums") {?>active <?php }?>item" href="/music/drums">Drums</a>
 					    </div>
 					</div>
 					<a class="<? if($cont == "finances") {?>active <?php }?>item" href="/finances">Finances</a>
+					<a class="<? if($cont == "laweekly") {?>active <?php }?>item" href="/laweekly">LA Weekly</a>
 				</div>
 			</div>
 			<div id="main" class="thirteen wide column">
